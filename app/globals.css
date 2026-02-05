@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none !important;
+    }
+
+    a,
+    button,
+    input,
+    textarea,
+    .cursor-hover {
+        cursor: none !important;
+    }
+}
+
+:root {
+
+
+    --background: #050505;
+    --foreground: #e5e5e5;
+}
+
+@theme inline {
+    --font-poppins: var(--font-poppins);
+    --font-unna: var(--font-unna);
+    --color-background: #050505;
+    --color-foreground: #e5e5e5;
+
+    --color-primary: #3b82f6;
+    --color-primary-foreground: #ffffff;
+
+    --color-muted: #171717;
+    --color-muted-foreground: #a3a3a3;
+
+    --color-accent: #262626;
+    --color-accent-foreground: #fafafa;
+}
+
+/* Lenis Scroll Smoothness */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-poppins), "sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.font-unna {
+    font-family: var(--font-unna);
+}
+
+/* Soft Selection */
+::selection {
+    background: rgba(59, 130, 246, 0.3);
+    /* Blue accent */
+    color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 4px;
+    border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #404040;
+}
+
+/* Utilities */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
