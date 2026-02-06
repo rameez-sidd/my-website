@@ -35,16 +35,30 @@ export default function Cinema() {
 
                 {/* Marquee Container */}
                 <div className="relative w-full overflow-hidden mask-fade-sides">
-                    <motion.div
-                        className="flex gap-8 md:gap-12 w-max pl-6 md:pl-24"
-                        animate={{ x: ["0%", "-33.33%"] }}
-                        transition={{
-                            repeat: Infinity,
-                            ease: "linear",
-                            duration: 40,
-                        }}
-                        whileHover={{ animationPlayState: "paused" }}
+                    <div
+                        className="flex gap-8 md:gap-12 w-max pl-6 md:pl-24 animate-marquee"
                     >
+                        <style jsx global>{`
+                            @keyframes marquee {
+                                0% { transform: translateX(0%); }
+                                100% { transform: translateX(-33.33%); }
+                            }
+                            .animate-marquee {
+                                animation: marquee 70s linear infinite;
+                            }
+                            /* Mobile: Pause on press (active) */
+                            @media (max-width: 768px) {
+                                .animate-marquee:active {
+                                    animation-play-state: paused;
+                                }
+                            }
+                            /* Desktop: Pause on hover */
+                            @media (min-width: 769px) {
+                                .animate-marquee:hover {
+                                    animation-play-state: paused;
+                                }
+                            }
+                        `}</style>
                         {loopedMovies.map((movie, idx) => (
                             <div
                                 key={`${movie.title}-${idx}`}
@@ -75,9 +89,9 @@ export default function Cinema() {
                                 </div>
                             </div>
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
