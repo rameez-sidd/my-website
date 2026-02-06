@@ -35,6 +35,8 @@
 
     --color-accent: #262626;
     --color-accent-foreground: #fafafa;
+
+    --breakpoint-xs: 506px;
 }
 
 /* Lenis Scroll Smoothness */

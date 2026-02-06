@@ -36,10 +36,10 @@ export default function HeroOverlay() {
 
                 {/* Stage 1: Intro */}
                 <motion.div style={{ opacity: opacity1 }} className="absolute text-center px-2 ">
-                    <h1 className="text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-white ">
+                    <h1 className="text-6xl xs:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-white ">
                         Rameez <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Siddiqui</span>
                     </h1>
-                    <p className="text-xl lg:text-3xl text-zinc-300 font-light">
+                    <p className="text-xl sm:text-[23px] md:text-[27px] lg:text-3xl text-zinc-300 font-light">
                         Software Engineer
                     </p>
                 </motion.div>
@@ -80,7 +80,7 @@ export default function HeroOverlay() {
 
                 {/* Stage 5: CTA */}
                 <motion.div style={{ opacity: opacityEnd }} className="absolute text-center w-full">
-                    <p className="text-zinc-300 text-xl sm:text-2xl md:text-3xl animate-bounce">Scroll to explore my work ↓</p>
+                    <p className="text-zinc-300/60 text-xl sm:text-2xl md:text-3xl animate-bounce font-extralight">Scroll to explore my work ↓</p>
                 </motion.div>
 
             </div>

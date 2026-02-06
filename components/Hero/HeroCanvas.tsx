@@ -1,13 +1,45 @@
 'use client';
 
-import { useScroll, useMotionValueEvent } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
+import { useScroll, useMotionValueEvent, useTransform, motion, MotionValue } from 'framer-motion';
+import { useRef, useEffect, useState, useMemo } from 'react';
 import clsx from 'clsx';
 import { Loader2 } from 'lucide-react';
 
 const FRAME_COUNT = 48; // Total frames in /public/frames
 const FRAME_PATH = '/frames/ezgif-frame-'; // Prefix
 const FRAME_EXT = '.jpg'; // Extension
+
+const DebrisField = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
+    // Generate random particles
+    const particles = useMemo(() => {
+        return Array.from({ length: 70 }).map((_, i) => ({
+            id: i,
+            x: Math.random() * 100, // %
+            y: Math.random() * 100, // %
+            size: Math.random() * 3 + 1, // px
+            opacity: Math.random() * 0.3 + 0.1,
+            speed: Math.random() * 200 + 50, // parallax distance
+        }));
+    }, []);
+
+    return (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden mix-blend-screen">
+            {particles.map((p) => {
+                // Each particle moves differently based on its speed
+                // eslint-disable-next-line react-hooks/rules-of-hooks
+                const y = useTransform(scrollYProgress, [0, 1], [0, p.speed * -1]);
+
+                return (
+                    <motion.div
+                        key={p.id}
+                        style={{ y, left: `${p.x}%`, top: `${p.y}%`, opacity: p.opacity, width: p.size, height: p.size }}
+                        className="absolute bg-white rounded-full "
+                    />
+                );
+            })}
+        </div>
+    );
+};
 
 export default function HeroCanvas() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -146,6 +178,9 @@ export default function HeroCanvas() {
                         firstFrameLoaded ? "opacity-100" : "opacity-0"
                     )}
                 />
+
+                {/* Debris Field */}
+                <DebrisField scrollYProgress={scrollYProgress} />
 
                 {/* Loader Overlay - Shows until ALL frames are ready */}
                 {/* We keep it visible even if first frame is loaded, until buffer is full? 

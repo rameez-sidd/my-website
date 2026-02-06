@@ -2,11 +2,12 @@
 
 import { PROFILE } from '@/lib/data';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Github, Linkedin, ArrowRight, Instagram, Heart } from 'lucide-react';
 
 const icons: Record<string, any> = {
     "github": Github,
-    "linkedin": Linkedin
+    "linkedin": Linkedin,
+    "instagram": Instagram
 };
 
 export default function Contact() {
@@ -64,7 +65,7 @@ export default function Contact() {
                 </div>
 
                 <footer className="mt-32 text-zinc-600 text-xs">
-                    &copy; {new Date().getFullYear()} {PROFILE.name}. <br className="md:hidden" /> Engineered with Next.js, Tailwind, & Motion.
+                    &copy; {new Date().getFullYear()} {PROFILE.name}. <br className="md:hidden" /> Engineered with <Heart className='w-3 -mt-1 h-3 inline' />
                 </footer>
             </motion.div>
         </section>

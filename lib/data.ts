@@ -5,6 +5,7 @@ export const PROFILE = {
     social: {
         github: "https://github.com/rameez-sidd",
         linkedin: "https://linkedin.com/in/rameez-siddiqui",
+        instagram: "https://instagram.com/rameez.sidd"
     },
     about: [
         "I'm a passionate full-stack developer with a Master’s in Computer Applications from Jamia Millia Islamia. I build robust systems, not just websites.",
@@ -18,31 +19,31 @@ export const PROJECTS = [
         description: "A full-stack Learning Management System (LMS) with role-based access control, secure auth, and payment integration.",
         stack: ["React", "Node.js", "MongoDB", "Redux", "Stripe", "Redis"],
         features: ["Role-based Access", "Course Management", "Secure Auth (JWT)", "Payments"],
-        github: "https://github.com/rameez-sidd",
-        link: "https://elevana.com"
+        github: "https://github.com/rameez-sidd/elevana",
+        link: "https://elevana-mu.vercel.app/"
     },
     {
         title: "CareerConnect",
         description: "A comprehensive job portal linking job seekers with recruiters through a tailored, efficient platform.",
         stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
         features: ["Adv. Job Filtering", "Application Tracking", "Recruiter Dashboard", "Real-time Status"],
-        github: "https://github.com/rameez-sidd",
-        link: "#"
+        github: "https://github.com/rameez-sidd/CareerConnect",
+        link: "https://careerconnect-fina.onrender.com/"
     },
     {
         title: "Grill & Chill",
         description: "A responsive restaurant website simulation with booking capabilities.",
         stack: ["HTML", "CSS", "JavaScript", "Netlify Forms"],
         features: ["Responsive Design", "Online Reservation", "Continuous Deployment"],
-        github: "https://github.com/rameez-sidd",
-        link: "#"
+        github: "https://github.com/rameez-sidd/Restaurant-Site",
+        link: "https://grillnchill.netlify.app/"
     },
     {
         title: "Bank Management System",
         description: "A C++ based system utilizing file handling for robust data persistence and banking operations.",
         stack: ["C++", "File System", "OOP"],
         features: ["Account Management", "Transaction History", "Secure Data Storage"],
-        github: "https://github.com/rameez-sidd",
+        github: "https://github.com/rameez-sidd/bank-management-system",
         link: "#"
     }
 ];
