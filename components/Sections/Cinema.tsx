@@ -62,7 +62,7 @@ export default function Cinema() {
                         {loopedMovies.map((movie, idx) => (
                             <div
                                 key={`${movie.title}-${idx}`}
-                                className="group relative w-[300px] md:w-[400px] aspect-[2/3] flex-shrink-0 bg-zinc-900 overflow-hidden rounded-sm"
+                                className="group select-none relative w-[300px] md:w-[400px] aspect-[2/3] flex-shrink-0 bg-zinc-900 overflow-hidden rounded-sm"
                             >
                                 {/* Movie Poster Image */}
                                 <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700">
