@@ -1,14 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Home, User, Briefcase, Cpu, Film, Mail } from 'lucide-react';
+import { Home, User, Briefcase, Cpu, Film, Mail, GraduationCap } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const navItems = [
     { name: 'Home', icon: Home, href: '#' },
     { name: 'Profile', icon: User, href: '#about' },
-    { name: 'Experience', icon: Briefcase, href: '#experience' },
-    { name: 'Work', icon: Briefcase, href: '#projects' },
+    { name: 'Education', icon: GraduationCap, href: '#experience' },
+    { name: 'Projects', icon: Briefcase, href: '#projects' },
     { name: 'Skills', icon: Cpu, href: '#skills' },
     { name: 'Cinema', icon: Film, href: '#cinema' },
     { name: 'Contact', icon: Mail, href: '#contact' },

@@ -29,7 +29,7 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group relative border-t border-zinc-800 pt-12 hover:border-indigo-500/50 transition-colors duration-500"
+                            className="group relative border-t border-zinc-800 pt-8 md:pt-12 hover:border-indigo-500/50 transition-colors duration-500"
                         >
                             {/* Preview image */}
                             {project.image && (

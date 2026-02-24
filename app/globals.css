@@ -79,10 +79,11 @@ body {
 
 /* Soft Selection */
 ::selection {
-    background: rgba(59, 130, 246, 0.3);
-    /* Blue accent */
-    color: white;
+    background: #ffffff !important;
+    color: #000000 !important;
+    text-shadow: none;
 }
+
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {

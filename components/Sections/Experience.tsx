@@ -27,7 +27,7 @@ export default function ExperienceSection() {
                     className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16 sm:mb-20 md:mb-24"
                 >
                     <div>
-                        <h2 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
+                        <h2 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white">
                             Experience &amp; Education
                         </h2>
                         <p className="mt-1 sm:mt-2 md:mt-3 text-zinc-500 text-sm md:text-base max-w-xl">
