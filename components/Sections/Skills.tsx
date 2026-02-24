@@ -19,9 +19,9 @@ export default function Skills() {
                     className="text-center mb-16 sm:mb-20 md:mb-24"
                 >
                     <h2 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3.5 sm:mt-0 leading-[40px] sm:leading-none bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-600">
-                        Technical Arsenal
+                    Skills & Expertise
                     </h2>
-                    <p className="mt-3 sm:mt-2 md:mt-3 text-zinc-500 text-sm md:text-base">The tools I use to build worlds.</p>
+                    <p className="mt-3 sm:mt-2 md:mt-3 text-zinc-500 text-sm md:text-base">The technologies I use to design, develop, and deploy high-performance applications.</p>
                 </motion.div>
 
                 {/* Minimal Logo Grid */}

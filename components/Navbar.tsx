@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 const navItems = [
     { name: 'Home', icon: Home, href: '#' },
     { name: 'Profile', icon: User, href: '#about' },
+    { name: 'Experience', icon: Briefcase, href: '#experience' },
     { name: 'Work', icon: Briefcase, href: '#projects' },
     { name: 'Skills', icon: Cpu, href: '#skills' },
     { name: 'Cinema', icon: Film, href: '#cinema' },
@@ -52,7 +53,7 @@ export default function Navbar() {
                             key={item.name}
                             href={item.href}
                             onClick={() => setActive(item.href)}
-                            className="relative px-4 py-2 rounded-full transition-colors group"
+                            className="relative px-3.5 xs:px-4 md:px-3.5 lg:px-4 py-2 rounded-full transition-colors group"
                         >
                             {isActive && (
                                 <motion.div

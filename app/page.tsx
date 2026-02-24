@@ -1,5 +1,6 @@
 import HeroOverlay from "@/components/Hero/HeroOverlay";
 import About from "@/components/Sections/About";
+import ExperienceSection from "@/components/Sections/Experience";
 import Projects from "@/components/Sections/Projects";
 import Skills from "@/components/Sections/Skills";
 import Contact from "@/components/Sections/Contact";
@@ -14,6 +15,7 @@ export default function Home() {
 
             <div className="relative z-20 bg-[#050505]">
                 <About />
+                <ExperienceSection />
                 <Projects />
                 <Skills />
                 <Cinema />

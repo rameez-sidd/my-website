@@ -19,6 +19,7 @@ export const PROJECTS = [
         description: "A full-stack Learning Management System (LMS) with role-based access control, secure auth, and payment integration.",
         stack: ["React", "Node.js", "MongoDB", "Redux", "Stripe", "Redis"],
         features: ["Role-based Access", "Course Management", "Secure Auth (JWT)", "Payments"],
+        image: "elevana.png",
         github: "https://github.com/rameez-sidd/elevana",
         link: "https://elevana-mu.vercel.app/"
     },
@@ -27,14 +28,16 @@ export const PROJECTS = [
         description: "A comprehensive job portal linking job seekers with recruiters through a tailored, efficient platform.",
         stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
         features: ["Adv. Job Filtering", "Application Tracking", "Recruiter Dashboard", "Real-time Status"],
+        image: "careerconnect.png",
         github: "https://github.com/rameez-sidd/CareerConnect",
         link: "https://careerconnect-fina.onrender.com/"
     },
     {
-        title: "Grill & Chill",
+        title: "Zest & Zing",
         description: "A responsive restaurant website simulation with booking capabilities.",
         stack: ["HTML", "CSS", "JavaScript", "Netlify Forms"],
         features: ["Responsive Design", "Online Reservation", "Continuous Deployment"],
+        image: "zestzing.png",
         github: "https://github.com/rameez-sidd/Restaurant-Site",
         link: "https://grillnchill.netlify.app/"
     },
@@ -43,6 +46,7 @@ export const PROJECTS = [
         description: "A C++ based system utilizing file handling for robust data persistence and banking operations.",
         stack: ["C++", "File System", "OOP"],
         features: ["Account Management", "Transaction History", "Secure Data Storage"],
+        image: "bank-management.png",
         github: "https://github.com/rameez-sidd/bank-management-system",
         link: "#"
     }
@@ -67,6 +71,49 @@ export const TECH_STACK = [
     // { name: "DBMS", icon: "database", type: "concept" } // Lucide icon mapping
 ];
 
+export const EXPERIENCE = [
+    {
+        company: "SPAI Labs",
+        location: "New Delhi, Delhi, India · Hybrid",
+        totalDuration: "1 yr 1 mo",
+        logo: "/experience/spai.jpg",
+        roles: [
+            {
+                title: "Software Engineer Trainee",
+                type: "Full-time",
+                period: "Aug 2025 - Present",
+                duration: "7 mos"
+            },
+            {
+                title: "Software Engineer Intern",
+                type: "Internship",
+                period: "Feb 2025 - Jul 2025",
+                duration: "6 mos"
+            }
+        ]
+    },
+    
+];
+
+export const EDUCATION = [
+    {
+        institution: "Department of Computer Science, Jamia Millia Islamia, Central University, New Delhi, India",
+        shortName: "Jamia Millia Islamia (Dept. of CS)",
+        degree: "Master of Computer Applications - MCA",
+        period: "Aug 2023 – Jul 2025",
+        gradeLabel: "CGPA",
+        gradeValue: "8.86"
+    },
+    {
+        institution: "Faculty of Natural Sciences, Jamia Millia Islamia, Central University, New Delhi, India",
+        shortName: "Jamia Millia Islamia",
+        degree: "Bachelor of Science - BS, Mathematics and Computer Science",
+        period: "Aug 2020 – Jul 2023",
+        gradeLabel: "CGPA",
+        gradeValue: "8.89"
+    }
+];
+
 export const MOVIES = [
     {
         title: "Fight Club",
@@ -83,7 +130,7 @@ export const MOVIES = [
     {
         title: "Interstellar",
         year: "2014",
-        quote: "We used to look up at the sky and wonder at our place in the stars.",
+        quote: "Love is the one thing we're capable of perceiving that transcends dimensions of time and space.",
         poster: "interstellar.jpg"
     },
     {

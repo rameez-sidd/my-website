@@ -3,6 +3,7 @@
 import { PROJECTS } from '@/lib/data';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Projects() {
     return (
@@ -12,12 +13,12 @@ export default function Projects() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="flex items-end justify-between mb-16 sm:mb-20 md:mb-24"
+                    className="mb-16 sm:mb-20 md:mb-24"
                 >
                     <h2 className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
                         Selected Works
                     </h2>
-                    <span className="hidden md:block text-zinc-500 text-sm">(04)</span>
+                    <p className="mt-1 sm:mt-2 md:mt-3 text-zinc-500 text-sm md:text-base">A selection of applications I’ve designed, developed, and deployed.</p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -30,21 +31,34 @@ export default function Projects() {
                             transition={{ delay: idx * 0.1 }}
                             className="group relative border-t border-zinc-800 pt-12 hover:border-indigo-500/50 transition-colors duration-500"
                         >
-                            <div className="flex justify-between items-start mb-6">
-                                <h3 className="text-[28px] sm:text-3xl font-bold text-zinc-100 group-hover:text-white transition-colors">
+                            {/* Preview image */}
+                            {project.image && (
+                                <div className="relative mb-6 aspect-[1715/829] overflow-hidden rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
+                                    <Image
+                                        src={`/projects/${project.image}`}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80 pointer-events-none" />
+                                </div>
+                            )}
+
+                            <div className="flex justify-between gap-3 items-start mb-3">
+                                <h3 className="text-[22px] sm:text-3xl font-bold -mt-2 text-zinc-100 group-hover:text-white transition-colors leading-tight">
                                     {project.title}
                                 </h3>
                                 <div className="flex gap-4">
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="cursor-none">
-                                        <Github className="w-5 h-5 text-zinc-600 hover:text-white transition-colors" />
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="cursor-none shrink-0">
+                                        <Github className="w-5 h-5 text-zinc-600 hover:text-white transition-colors shrink-0" />
                                     </a>
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="cursor-none">
-                                        <ArrowUpRight className="w-5 h-5 text-zinc-600 hover:text-indigo-400 transition-colors" />
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="cursor-none shrink-0">
+                                        <ArrowUpRight className="w-5 h-5 text-zinc-600 hover:text-indigo-400 transition-colors shrink-0" />
                                     </a>
                                 </div>
                             </div>
 
-                            <p className="text-zinc-400 font-light mb-8 leading-relaxed max-w-md">
+                            <p className="text-zinc-400 text-sm sm:text-base font-light mb-8 leading-relaxed max-w-md">
                                 {project.description}
                             </p>
 
